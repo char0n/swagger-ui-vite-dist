@@ -16,5 +16,13 @@ export default defineConfig({
       "@/assets/swagger-ui/swagger-ui-es-bundle.js",
       "@/assets/swagger-ui/swagger-ui-standalone-preset.js"
     ]
+  },
+  build: {
+    commonjsOptions: {
+      include: [
+        /assets\/swagger-ui\/swagger-ui-es-bundle.js$/,
+        /assets\/swagger-ui\/swagger-ui-standalone-preset.js$/,
+      ],
+    },
   }
 })
